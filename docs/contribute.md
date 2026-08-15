@@ -10,8 +10,33 @@ Open an issue if you spot something wrong, have a question, or want to suggest a
 
 1. Fork this repo
 2. Make your change
-3. Open a pull request saying what changed and, if relevant, how you checked it
-4. If you added a new page, add it to the sidebar in docs/.vitepress/config.mjs in the same PR
+3. Add yourself to the `authors` array at the top of the page
+4. Add yourself to the contributors page
+5. Open a pull request saying what changed and, if relevant, how you checked it
+
+## Starting a new page
+
+Copy this into your file:
+
+```md
+---
+version: "0.1.30"
+authors: ["your name"]
+---
+
+# Page title
+
+One line saying what this page is about
+
+## First section
+
+Your content ...
+```
+
+- `version` is the Vellum version you checked the page against
+- `authors` is who wrote it (ie you!)
+- all authors show up in the byline at the top of the page
+- then add your page to the sidebar in `docs/.vitepress/config.mjs`
 
 ## What makes a good page
 
@@ -20,21 +45,13 @@ Open an issue if you spot something wrong, have a question, or want to suggest a
 - Images and examples often beat lengthy prose (I should take my own advice 😁)
 - Plain, human, friendly words are welcome and most appreciated
 
-## Say which version you checked against
-
-Every page records the version of Vellum it was checked against at the top of the file:
-
-    ---
-    version: "0.1.30"
-    ---
-
-Vellum changes quickly which means pages can often go stale. So ... if you edit a page, set the version to whatever you tested on.
-
 ## While Vellum is in private beta
 
 Screenshots, tips and how-tos are fine and welcome and awesome. But please no builds, installers, invite links, etc.
 
-## Credit
+## License
 
-Every page shows who wrote it, plus there's a contributors page. The writing here is under Creative Commons Attribution, so it can be reused anywhere, including on vellumnotes.app, as long as contributors are credited.
+The writing here is under Creative Commons Attribution.
+
+
 
