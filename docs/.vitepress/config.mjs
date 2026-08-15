@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { shortcutSections, shortcutSlug } from './theme/shortcuts'
 
 export default defineConfig({
   title: 'Vellum Guide',
@@ -6,6 +7,27 @@ export default defineConfig({
   head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
   cleanUrls: true,
   lastUpdated: true,
+  transformPageData(pageData) {
+    if (pageData.relativePath !== 'keyboard-shortcuts.md') return
+
+    return {
+      headers: shortcutSections.map((section) => ({
+        level: 2,
+        title: section.title,
+        slug: shortcutSlug(section.title),
+        link: `#${shortcutSlug(section.title)}`,
+        children: (section.supplements ?? [])
+          .filter((supplement) => supplement.title)
+          .map((supplement) => ({
+            level: 3,
+            title: supplement.title,
+            slug: shortcutSlug(supplement.title),
+            link: `#${shortcutSlug(supplement.title)}`,
+            children: [],
+          })),
+      })),
+    }
+  },
   themeConfig: {
     nav: [],
     sidebar: [
@@ -13,6 +35,7 @@ export default defineConfig({
         text: 'Vellum Guide',
         items: [
           { text: 'Overview', link: '/' },
+          { text: 'Keyboard shortcuts', link: '/keyboard-shortcuts' },
         ]
       },
       {
