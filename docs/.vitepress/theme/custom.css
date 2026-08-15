@@ -23,3 +23,12 @@
   background: var(--vp-c-default-soft);
   color: var(--vp-c-text-2);
 }
+
+.vg-byline a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.vg-byline a:hover {
+  text-decoration: underline;
+}
