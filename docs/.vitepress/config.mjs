@@ -7,13 +7,20 @@ export default defineConfig({
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
-    nav: [{ text: 'Contribute', link: '/contribute' }],
+    nav: [],
     sidebar: [
       {
         text: 'Vellum Guide',
         items: [
           { text: 'Overview', link: '/' },
           { text: 'Test page', link: '/test-page' }
+        ]
+      },
+      {
+        text: 'About this guide',
+        items: [
+          { text: 'Contributors', link: '/contributors' },
+          { text: 'Contribute', link: '/contribute' }
         ]
       }
     ],
