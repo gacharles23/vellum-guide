@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Vellum Guide',
   description: 'The Vellum user guide. Written by the Vellum community.',
+  head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
   cleanUrls: true,
   lastUpdated: true,
   themeConfig: {
