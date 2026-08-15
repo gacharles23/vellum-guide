@@ -26,7 +26,7 @@ export default defineConfig({
       text: 'Suggest an edit to this page'
     },
     footer: {
-      message: 'Written by the Vellum community. Licensed CC BY 4.0.'
+      message: 'Written by the <a href="/contributors">Vellum community</a>. Licensed CC BY 4.0.'
     }
   }
 })
