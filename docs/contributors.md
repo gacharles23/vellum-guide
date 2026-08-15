@@ -5,7 +5,7 @@ This guide is written by people who use Vellum.
 ## How it started
 - **Futur Panda** - had the original idea, and wrote the first community guide
 - **phild** - extended the docs site to VitePress, which this one is modeled on
-- **maciej** - reinforced the case for open source documentation
+- **Maciej** - reinforced the case for open source documentation
 - **Grace** - wired up the site into docs.vellumnotes.app
 
 ## Writing
