@@ -1,0 +1,25 @@
+.vg-byline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+}
+
+.vg-dot {
+  color: var(--vp-c-text-3);
+}
+
+.vg-names {
+  color: var(--vp-c-brand-1);
+}
+
+.vg-chip {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-2);
+}
