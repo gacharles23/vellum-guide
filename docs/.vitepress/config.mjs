@@ -13,7 +13,6 @@ export default defineConfig({
         text: 'Vellum Guide',
         items: [
           { text: 'Overview', link: '/' },
-          { text: 'Test page', link: '/test-page' }
         ]
       },
       {
