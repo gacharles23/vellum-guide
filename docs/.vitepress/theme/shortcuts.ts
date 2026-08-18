@@ -104,6 +104,7 @@ export const shortcutSections: ShortcutSection[] = [
     shortcuts: [
       { action: 'Open the command palette', mac: 'Cmd + K', windows: 'Ctrl + K' },
       { action: 'Open the date picker', mac: 'Shift + Cmd + D', windows: 'Shift + Ctrl + D' },
+      { action: 'Go to today\'s page', mac: 'Cmd + D', windows: 'Ctrl + D' },
     ],
     supplements: [
       { paragraphs: ["In the date picker, press a to go to the daily-notes node and t to open today's node."] },
@@ -112,8 +113,8 @@ export const shortcutSections: ShortcutSection[] = [
   {
     title: 'Keyboard movement',
     shortcuts: [
-      { action: 'Centre the current node on screen', mac: 'Cmd + J', windows: 'Ctrl + J' },
-      { action: 'Open the Letters Overlay', mac: 'Ctrl + S', windows: 'Cmd + J' },
+      { action: 'Center the current node on screen', mac: 'Cmd + J', windows: 'Ctrl + J' },
+      { action: 'Open the Letters Overlay', mac: 'Ctrl + S', windows: 'Ctrl + S' },
       { action: 'Enter Select Mode', mac: 'Esc', windows: 'Esc' },
       { action: 'Go to the top of the page, in Select Mode', mac: 't', windows: 't' },
       { action: 'Go to the bottom of the page, in Select Mode', mac: 'b', windows: 'b' },
@@ -132,8 +133,8 @@ export const shortcutSections: ShortcutSection[] = [
     title: 'Marks',
     introduction: 'Vellum has up to four mark slots. Marks can point to nodes on a page or to entire pages, making it quick to move between important locations.',
     shortcuts: [
-      { action: 'Add or remove a mark (slots 1–4)', mac: 'Shift + Ctrl + 1–4', windows: 'Shift + Alt + 1–4' },
-      { action: 'Go to a mark (slots 1–4)', mac: 'Ctrl + 1–4', windows: 'Alt + 1–4' },
+      { action: 'Add or remove a mark (slots 1–4)', mac: 'Shift + Ctrl + 1–4', windows: 'Shift + Ctrl + 1–4' },
+      { action: 'Go to a mark (slots 1–4)', mac: 'Ctrl + 1–4', windows: 'Ctrl + 1–4' },
     ],
     supplements: [{ paragraphs: ['You can reorder marks in the search palette.'] }],
   },
