@@ -54,6 +54,12 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Changelog',
+        items: [
+          { text: 'Release notes', link: '/changelog' }
+        ]
+      },
+      {
         text: 'About this guide',
         items: [
           { text: 'Contributors', link: '/contributors' },
