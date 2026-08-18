@@ -1,5 +1,20 @@
 import { defineConfig } from 'vitepress'
-import { shortcutSections, shortcutSlug } from './theme/shortcuts'
+import {
+  shortcutId,
+  shortcutSearchText,
+  shortcutSections,
+  shortcutSlug,
+} from './theme/shortcuts'
+
+function renderShortcutSearchEntries() {
+  return shortcutSections.map((section) => `
+    <h2>${section.title}<a href="#${shortcutSlug(section.title)}"></a></h2>
+    ${section.shortcuts.map((shortcut) => `
+      <h3>${shortcut.action}<a href="#${shortcutId(section.title, shortcut.action)}"></a></h3>
+      <p>${shortcutSearchText(shortcut)}</p>
+    `).join('')}
+  `).join('')
+}
 
 export default defineConfig({
   title: 'Vellum Guide',
@@ -46,7 +61,17 @@ export default defineConfig({
         ]
       }
     ],
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        _render(src, env, md) {
+          const html = md.render(src, env)
+          if (env.relativePath !== 'keyboard-shortcuts.md') return html
+
+          return `${html}${renderShortcutSearchEntries()}`
+        },
+      },
+    },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/gacharles23/vellum-guide' }
     ],

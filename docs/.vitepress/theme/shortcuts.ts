@@ -156,7 +156,86 @@ export const shortcutSections: ShortcutSection[] = [
 ]
 
 export function shortcutSlug(title: string): string {
-  return title.toLowerCase().replaceAll(' ', '-')
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+}
+
+export function shortcutId(sectionTitle: string, action: string): string {
+  return `shortcut-${shortcutSlug(sectionTitle)}-${shortcutSlug(action)}`
+}
+
+const searchableKeyNames: Record<string, string> = {
+  '\\': 'backslash',
+  '[': 'left bracket',
+  ']': 'right bracket',
+  '.': 'period dot',
+  ',': 'comma',
+  '/': 'slash',
+  "'": 'apostrophe quote',
+  '↑': 'arrow up',
+  '↓': 'arrow down',
+  '–': 'through to',
+}
+
+export function shortcutSearchText(shortcut: Shortcut): string {
+  const displayed = `${shortcut.mac} ${shortcut.windows}`
+  const aliases = Object.entries(searchableKeyNames)
+    .filter(([symbol]) => displayed.includes(symbol))
+    .map(([, words]) => words)
+
+  return `${displayed} ${displayed.replaceAll('Cmd', 'Command').replaceAll('Ctrl', 'Control')} ${aliases.join(' ')}`
+}
+
+const recordedKeyAliases: Record<string, string> = {
+  'arrow down': '↓',
+  'arrow up': '↑',
+  'apostrophe': "'",
+  'backslash': '\\',
+  'comma': ',',
+  'esc': 'escape',
+  'left bracket': '[',
+  'period': '.',
+  'right bracket': ']',
+  'slash': '/',
+}
+
+const modifierOrder = ['shift', 'ctrl', 'control', 'alt', 'option', 'cmd', 'command', 'meta']
+
+function normalizeChord(parts: string[]): string {
+  const normalized = parts.map((part) => {
+    const key = part.trim().toLowerCase()
+    return recordedKeyAliases[key] ?? key
+  })
+  const modifiers = normalized
+    .filter((part) => modifierOrder.includes(part))
+    .sort((a, b) => modifierOrder.indexOf(a) - modifierOrder.indexOf(b))
+    .map((part) => part === 'control' ? 'ctrl' : part === 'command' ? 'cmd' : part)
+  const keys = normalized.filter((part) => !modifierOrder.includes(part))
+
+  return [...modifiers, ...keys].join('+')
+}
+
+function shortcutChords(value: string): string[] {
+  const parts = value.split(' + ')
+  const key = parts.pop() ?? ''
+  let keys = key.split(/\s+\/\s+/)
+  const range = /^(\d)–(\d)$/.exec(key)
+
+  if (range) {
+    keys = Array.from(
+      { length: Number(range[2]) - Number(range[1]) + 1 },
+      (_, index) => String(Number(range[1]) + index),
+    )
+  }
+
+  return keys.map((candidate) => normalizeChord([...parts, candidate]))
+}
+
+export function shortcutMatches(recorded: string, shortcut: Shortcut): boolean {
+  const chord = normalizeChord(recorded.split(' + '))
+  return [...shortcutChords(shortcut.mac), ...shortcutChords(shortcut.windows)].includes(chord)
 }
 
 function addLine(lines: string[], depth: number, text: string) {

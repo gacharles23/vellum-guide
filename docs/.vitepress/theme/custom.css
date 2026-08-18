@@ -32,3 +32,144 @@
 .vg-byline a:hover {
   text-decoration: underline;
 }
+
+.shortcut-tools {
+  margin: 24px 0 32px;
+}
+
+.shortcut-finder {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+  background: var(--vp-c-bg-soft);
+}
+
+.shortcut-finder-content {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.shortcut-finder-help {
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.shortcut-finder-status.is-hidden {
+  visibility: hidden;
+}
+
+.shortcut-record-button {
+  min-width: 210px;
+  padding: 8px 14px;
+  border: 1px solid var(--vp-c-brand-1);
+  border-radius: 8px;
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-white);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shortcut-record-button:hover {
+  background: var(--vp-c-brand-2);
+  border-color: var(--vp-c-brand-2);
+}
+
+.shortcut-record-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.shortcut-copy-button {
+  white-space: nowrap;
+  padding: 8px 14px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shortcut-copy-button:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.shortcut-copy-button:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 3px;
+}
+
+.shortcut-recorded {
+  padding: 5px 10px;
+  border: 1px solid var(--vp-c-divider);
+  border-bottom-width: 2px;
+  border-radius: 6px;
+  background: var(--vp-c-bg);
+  font-size: 14px;
+}
+
+.shortcut-finder-status {
+  flex: 1 1 auto;
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.shortcut-copy-action {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.shortcut-copy-status {
+  display: grid;
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.shortcut-copy-status > span {
+  grid-area: 1 / 1;
+}
+
+.shortcut-copy-status > .is-hidden {
+  visibility: hidden;
+}
+
+@media (max-width: 640px) {
+  .shortcut-finder {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .shortcut-copy-action {
+    align-items: flex-start;
+  }
+}
+
+.shortcut-row {
+  scroll-margin-top: 96px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shortcut-row.is-shortcut-match {
+  background: var(--vp-c-brand-soft);
+  box-shadow: inset 3px 0 var(--vp-c-brand-1);
+}
+
+.shortcut-row:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: -2px;
+}
+
+.vp-doc._keyboard-shortcuts {
+  padding-bottom: 50vh;
+}

@@ -11,7 +11,7 @@ export default {
   },
   Layout() {
     return h(DefaultTheme.Layout, null, {
-      'doc-before': () => h(Byline)
+      'doc-before': () => h(Byline),
     })
   }
 }
