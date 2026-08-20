@@ -47,16 +47,16 @@ export default defineConfig({
     nav: [],
     sidebar: [
       {
+        text: 'Changelog',
+        items: [
+          { text: 'Release notes', link: '/changelog' }
+        ]
+      },
+      {
         text: 'Vellum Guide',
         items: [
           { text: 'Overview', link: '/' },
           { text: 'Keyboard shortcuts', link: '/keyboard-shortcuts' },
-        ]
-      },
-      {
-        text: 'Changelog',
-        items: [
-          { text: 'Release notes', link: '/changelog' }
         ]
       },
       {

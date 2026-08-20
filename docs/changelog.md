@@ -2,7 +2,7 @@
 title: Changelog
 description: Release notes for Vellum, from the earliest beta releases to today.
 authors: ["Grace"]
-version: "0.1.33"
+version: "0.1.35"
 outline: false
 ---
 
