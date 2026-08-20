@@ -177,6 +177,21 @@
   margin-top: 2.5rem;
 }
 
+.vg-release-index {
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+}
+
+.vg-release-index a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.vg-release-index a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .vg-latest-release {
   position: relative;
   margin-bottom: 3rem;

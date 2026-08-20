@@ -16,6 +16,13 @@ function renderShortcutSearchEntries() {
   `).join('')
 }
 
+function renderChangelogSearchEntries() {
+  return ['0.1.35', '0.1.34', '0.1.33'].map((version) => `
+    <h2 id="v${version}">Release v${version}<a href="#v${version}"></a></h2>
+    <p>Vellum release notes for version v${version}. Search for ${version} to open this release in the Changelog.</p>
+  `).join('')
+}
+
 export default defineConfig({
   title: 'Vellum Guide',
   description: 'The Vellum user guide. Written by the Vellum community.',
@@ -72,6 +79,9 @@ export default defineConfig({
       options: {
         _render(src, env, md) {
           const html = md.render(src, env)
+          if (env.relativePath === 'changelog.md') {
+            return `${html}${renderChangelogSearchEntries()}`
+          }
           if (env.relativePath !== 'keyboard-shortcuts.md') return html
 
           return `${html}${renderShortcutSearchEntries()}`
