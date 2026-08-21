@@ -42,6 +42,7 @@ export const shortcutSections: ShortcutSection[] = [
     shortcuts: [
       { action: 'Duplicate a node above or below', mac: 'Shift + Option + ↑ / ↓', windows: 'Shift + Alt + ↑ / ↓' },
       { action: 'Move the current node', mac: 'Shift + Cmd + ↑ / ↓', windows: 'Shift + Ctrl + ↑ / ↓' },
+      { action: 'Select multiple nodes', mac: 'Shift + ↑ / ↓', windows: 'Shift + ↑ / ↓' },
       { action: 'Select text, then expand the selection', mac: 'Cmd + A', windows: 'Ctrl + A' },
       { action: 'Copy the current node when nothing is selected', mac: 'Cmd + C', windows: 'Ctrl + C' },
       { action: 'Delete the current node', mac: 'Cmd + Shift + Backspace', windows: 'Ctrl + Shift + Backspace' },
