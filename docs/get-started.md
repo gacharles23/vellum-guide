@@ -49,7 +49,7 @@ Click a link to open it. <kbd>Cmd</kbd>-click (Mac) or <kbd>Ctrl</kbd>-click (Wi
 Put `#book` (or any tag) on a node. Click the tag to open its page — everything wearing that tag, with views you can switch.
 
 A tag can stay a plain marker (`#follow-up`), or grow fields such as Author, Status, or Due. Fields can also exist **without** a tag: vault-wide fields you reuse anywhere.
-
+ 
 From a parent node, <kbd>Cmd</kbd>+<kbd>K</kbd> / <kbd>Ctrl</kbd>+<kbd>K</kbd> → **Show view options** turns children into a list, table, cards, checklist, or board.
 
 ## Finding things
@@ -69,7 +69,7 @@ Before you type, the palette shows recent and pinned pages — <kbd>Enter</kbd> 
 
 ## Capture from your phone
 
-There is no mobile app yet. In beta, **Telegram** can send notes into your vault: messages go to your machine (Vellum doesn’t run a cloud for this). Vellum needs to be running to ingest them; if it’s closed, messages wait at Telegram for a while.
+In beta, **Telegram** can send notes into your vault: messages go to your machine (Vellum doesn’t run a cloud for this). Vellum needs to be running to ingest them; if it’s closed, messages wait at Telegram for a while.
 
 Setup steps live in [How do I capture from my phone?](/faq#telegram-capture).
 

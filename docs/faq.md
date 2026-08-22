@@ -21,7 +21,7 @@ Yes, a Discord: [vellumnotes.app/discord](https://vellumnotes.app/discord). Rele
 
 ### Is my data local? Is there a Vellum cloud?
 
-Your vault lives on your machine. Phone capture via Telegram also lands on your computer; it doesn’t go through a Vellum server.
+Your vault lives on your machine, and nothing get send to a server.
 
 ### Is there a web or mobile app?
 
@@ -84,11 +84,9 @@ macOS, Windows, and Linux desktops in the private beta.
 
 ### Is there automatic updates ? 
 
-At the moment, you get notified in-app of any new update available. You can
-click on the provided link to download the newest version. You will need to
-install manually this version. Please remember to quit the current running
-instance before doing anything. Then you can replace your old app, with the new
-one. Your data stays safe. 
+When an update is available, you’ll receive an in-app notification. Click the link to
+download the latest version, then install it manually. Quit Vellum before updating and
+replace the old app with the new one. Your data will remain safe.
 
 ### Mac says it can’t verify the app
 
