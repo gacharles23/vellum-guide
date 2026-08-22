@@ -55,9 +55,11 @@ export default defineConfig({
     nav: [],
     sidebar: [
       {
-        text: 'Changelog',
+        text: 'Start here',
         items: [
-          { text: 'Release notes', link: '/changelog' }
+          { text: 'Get started', link: '/get-started' },
+          { text: 'FAQ', link: '/faq' },
+          { text: 'Release notes', link: '/changelog' },
         ]
       },
       {
