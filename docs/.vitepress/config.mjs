@@ -5,6 +5,7 @@ import {
   shortcutSections,
   shortcutSlug,
 } from './theme/shortcuts'
+import { releaseVersions } from './theme/changelog'
 
 function renderShortcutSearchEntries() {
   return shortcutSections.map((section) => `
@@ -17,7 +18,7 @@ function renderShortcutSearchEntries() {
 }
 
 function renderChangelogSearchEntries() {
-  return ['0.1.35', '0.1.34', '0.1.33'].map((version) => `
+  return releaseVersions.map((version) => `
     <h2 id="v${version}">Release v${version}<a href="#v${version}"></a></h2>
     <p>Vellum release notes for version v${version}. Search for ${version} to open this release in the Changelog.</p>
   `).join('')
