@@ -15,6 +15,10 @@ Common questions from people using Vellum in beta. For a linear first day, start
 
 A local-first notes app that combines an outliner, markdown prose documents, and typed tags (with fields) on nodes — including paragraphs inside documents.
 
+### Is there a community?
+
+Yes, a Discord: [vellumnotes.app/discord](https://vellumnotes.app/discord). Release notes show up there first, and it's the fastest place to get a question answered or report something broken.
+
 ### Is my data local? Is there a Vellum cloud?
 
 Your vault lives on your machine. Phone capture via Telegram also lands on your computer; it doesn’t go through a Vellum server.
@@ -27,7 +31,7 @@ Desktop only in the private beta (macOS, Windows, and Linux). For capture on the
 
 ### Outline vs document — what’s the difference?
 
-An **outline** is a bullet tree. A **document** is continuous prose (closer to a writing app than to a block editor). You can convert an outline to a document; converting a document back to an outline is on the roadmap.
+An **outline** is a bullet tree. A **document** is continuous prose (closer to a writing app than to a block editor). You can convert an outline to a document; 
 
 ### What is a description?
 
@@ -78,6 +82,14 @@ Vellum must be running to ingest. If it’s closed, Telegram keeps messages for 
 
 macOS, Windows, and Linux desktops in the private beta.
 
+### Is there automatic updates ? 
+
+At the moment, you get notified in-app of any new update available. You can
+click on the provided link to download the newest version. You will need to
+install manually this version. Please remember to quit the current running
+instance before doing anything. Then you can replace your old app, with the new
+one. Your data stays safe. 
+
 ### Mac says it can’t verify the app
 
 Common with unsigned or frequently updated beta builds. Use your usual Gatekeeper bypass for apps you trust (for example open via right-click → Open the first time). You may need to do this again after each download until signing is sorted.
@@ -94,16 +106,21 @@ Common with unsigned or frequently updated beta builds. Use your usual Gatekeepe
 
 ### How do I import notes?
 
-Paste is the main path today. Markdown you bring in tends to land as **prose documents**. If you want outline structure, OPML-style outline data fits better than flat markdown.
+Paste is the main path today. Vellum reads indentation and bullet markers, so nesting survives the trip. Flat markdown paragraphs tend to land as prose documents instead.
 
 ### How do I export or back up?
 
-Use the built-in export when you need a dump. Automated periodic backups of the vault folder are a common request and not a polished feature yet. Before vault format upgrades, Vellum saves a backup automatically — after an upgrade, older app versions may not open that vault.
+Two things run automatically, and they do different jobs.
+
+**Your notes, written out as markdown files.** In Settings > Markdown export, pick a folder and choose how often it runs: every 15 minutes, every hour, every six hours, or once a day. Hourly is the default. You can also run it by hand any time you want a fresh copy. 
+
+**A copy of the vault itself.** Vellum sets one aside every time it starts, without you doing anything.
+
 ## Beta and product
 
 ### How do I get into the beta?
 
-Use the official waitlist / signup the team publishes. This guide doesn’t redistribute invite links or builds.
+Sign up at [vellumnotes.app/beta](https://vellumnotes.app/beta/)
 
 
 ---
