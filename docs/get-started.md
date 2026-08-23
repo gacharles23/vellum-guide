@@ -75,6 +75,6 @@ Setup steps live in [How do I capture from my phone?](/faq#telegram-capture).
 
 ## What’s next
 
-- [FAQ](/faq) — install quirks, mirrors, export, queries, and other recurring questions
+- [FAQ](/faq) — install quirks, export, queries, and other recurring questions
 - [Keyboard shortcuts](/keyboard-shortcuts) — the full shortcut reference
 - [Changelog](/changelog) — what’s new in each release

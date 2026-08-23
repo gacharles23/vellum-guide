@@ -21,7 +21,7 @@ Yes, a Discord: [vellumnotes.app/discord](https://vellumnotes.app/discord). Rele
 
 ### Is my data local? Is there a Vellum cloud?
 
-Your vault lives on your machine, and nothing get send to a server.
+Your vault lives on your machine, and there is no Vellum cloud holding your notes. A few things do reach the network, and only when you use them. Capture from your phone travels through Telegram. The assistant sends your question to Claude. Vellum checks for a newer build when it starts.
 
 ### Is there a web or mobile app?
 
@@ -31,7 +31,7 @@ Desktop only in the private beta (macOS, Windows, and Linux). For capture on the
 
 ### Outline vs document — what’s the difference?
 
-An **outline** is a bullet tree. A **document** is continuous prose (closer to a writing app than to a block editor). You can convert an outline to a document; 
+An **outline** is a bullet tree. A **document** is continuous prose (closer to a writing app than to a block editor). A plain note becomes a document from its own menu, with Convert to document.
 
 ### What is a description?
 
@@ -65,24 +65,25 @@ Reusable searches defined by rules. They can live in the sidebar, sit on a note 
 
 ### What’s special about tasks?
 
-`#task` is first-class: defaults for where new tasks land, date fields, rollups with projects and goals, blockers, and more. Checkbox rows and task tags work together; heavier work often uses a project that collects tasks via a reference field.
+`#task` is first-class. New tasks land on today by default, dates and priorities are fields, and a project page rolls up every task pointing at it. Checkbox rows and task tags work together, and heavier work often uses a project that collects tasks through a reference field.
 
 ### How do I capture from my phone? {#telegram-capture}
 
-Use the Telegram integration (beta stepping stone toward mobile):
+Use the Telegram integration:
 
 1. Create a bot with BotFather and copy the token into **Settings → Capture** in Vellum.
 2. Open the bot chat and send the one-time security code Vellum shows you.
 3. After pairing, messages (and images / voice) go into your vault — by default on today. You can aim them with `@place` and `#tag` in the message.
 
 Vellum must be running to ingest. If it’s closed, Telegram keeps messages for a while; when Vellum captures one it adds a thumbs-up in the chat.
+
 ## Install, data in and out
 
 ### Which platforms are supported?
 
 macOS, Windows, and Linux desktops in the private beta.
 
-### Is there automatic updates ? 
+### How do updates work ? 
 
 When an update is available, you’ll receive an in-app notification. Click the link to
 download the latest version, then install it manually. Quit Vellum before updating and
@@ -118,7 +119,7 @@ Two things run automatically, and they do different jobs.
 
 ### How do I get into the beta?
 
-Sign up at [vellumnotes.app/beta](https://vellumnotes.app/beta/)
+Sign up at [vellumnotes.app/beta](https://vellumnotes.app/beta/).
 
 
 ---

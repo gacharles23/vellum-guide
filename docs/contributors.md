@@ -12,5 +12,6 @@ This guide is written by people who use Vellum.
 
 Everyone here has written or edited pages on this site. If you make a change, add yourself to the list below in the same PR.
 
+- **Futur Panda**
 - **your name here**, when you make your first change
 
