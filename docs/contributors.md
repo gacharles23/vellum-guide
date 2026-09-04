@@ -10,8 +10,6 @@ This guide is written by people who use Vellum.
 
 ## Writing
 
-Everyone here has written or edited pages on this site. If you make a change, add yourself to the list below in the same PR.
+Everyone here has written or edited a page on this site. When your first change goes live, we'll add your name below.
 
 - **Futur Panda**
-- **your name here**, when you make your first change
-
