@@ -1,42 +1,48 @@
 # Contribute
 
-This guide is written by people who use Vellum.
+This guide is written by people who use Vellum. Anyone can fix a page or add a tip. You do not need to know git or be a developer. A browser is enough.
 
-## Suggest a change
+## Change something on a page
 
-Open an issue if you spot something wrong, have a question, or want to suggest a topic.
+1. Open the page on this site and click "Suggest an edit to this page" at the bottom.
+2. GitHub asks you to sign in. No account? Click "Create an account", it's free. After that it brings you back to the edit screen.
+3. Click "Fork this repository". It makes your own copy of the guide to edit.
+4. You will see the page's text, like a plain text editor. Change what you want right there. The few lines above the title (title, description, authors) stay. Add your name to the authors line and you show up in the byline at the top of the page.
+5. Click the green "Commit changes..." button top right, type one line saying what you changed, and click "Propose changes".
+6. Click "Create pull request". A pull request is GitHub's name for "here is my change, please take a look".
 
-## Make an edit
+That is it. Someone reviews it and makes it live, or writes back with a suggestion. Your name goes on the [Contributors](/contributors) page too. We add it when your first change goes live.
 
-1. Fork this repo
-2. Make your change
-3. Add yourself to the `authors` array at the top of the page
-4. Add yourself to the contributors page
-5. Open a pull request saying what changed and, if relevant, how you checked it
+## Two rules
 
-## Starting a new page
+- One change per pull request. A typo fix and a new tip are two pull requests.
+- Images and recordings: write your words first. Then, on that last screen, drag the image into the description box. We'll put it in the right place when we review your change. 10MB max each.
 
-Copy this into your file:
+## Already use git?
+
+Do it the usual way. Fork, branch, pull request.
+
+## Want a whole new page?
+
+Say so on [Discord](https://vellumnotes.app/discord) or [open an issue](https://github.com/gacharles23/vellum-guide/issues). We'll create the empty page and put it in the sidebar. Then you can fill it in with the steps above.
+
+If you use git and want to do it yourself, start the file with:
 
 ```md
 ---
-version: "0.1.30"
+title: Page title
+description: One line saying what this page is about
 authors: ["your name"]
 ---
 
 # Page title
-
-One line saying what this page is about
 
 ## First section
 
 Your content ...
 ```
 
-- `version` is the Vellum version you checked the page against
-- `authors` is who wrote it (ie you!)
-- all authors show up in the byline at the top of the page
-- then add your page to the sidebar in `docs/.vitepress/config.mjs`
+Then add the page to the sidebar list in `docs/.vitepress/config.mjs`.
 
 ## What makes a good page
 
@@ -52,6 +58,3 @@ Screenshots, tips and how-tos are fine and welcome and awesome. But please no bu
 ## License
 
 The writing here is under Creative Commons Attribution.
-
-
-
