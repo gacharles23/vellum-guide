@@ -27,7 +27,10 @@ function renderChangelogSearchEntries() {
 export default defineConfig({
   title: 'Vellum Guide',
   description: 'The Vellum user guide. Written by the Vellum community.',
-  head: [['meta', { name: 'robots', content: 'noindex, nofollow' }]],
+    head: [
+    ['meta', { name: 'robots', content: 'noindex, nofollow' }],
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+  ],
   cleanUrls: true,
   lastUpdated: true,
   transformPageData(pageData) {
@@ -67,6 +70,7 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/' },
           { text: 'Keyboard shortcuts', link: '/keyboard-shortcuts' },
+          { text: 'Tips and tricks', link: '/tips-and-tricks' },
         ]
       },
       {
