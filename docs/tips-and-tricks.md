@@ -18,6 +18,38 @@ Cmd-K on any bullet, then Add to, and pick a note. The bullet stays where you wr
 
 Shared by Grace.
 
+## Document Mode: Journaling with Structure
+
+Document mode lets you write in continuous prose,  a journal entry, a reflection, a brain dump, while still getting the structure benefits of Vellum's tagging and querying system, paragraph by paragraph. Most note-taking tools force a choice between free writing (journals, notebooks) and structured capture (tagged nodes, outlines). Document mode removes that trade-off.
+
+### What's actually happening cognitively
+
+**Prose writing** is generative and associative. You’re not retrieving known facts, you're letting connections surface that weren't fully formed before you started typing. *Writing to think*: the writing process does cognitive work your head alone can't, because articulation forces vague impressions into sequence and language. 
+
+**Tagging** is a completely different operation. It’s evaluative and discrete. You step back from the flow and ask 'does this matter, and as what?’ 
+It’s classifying.
+
+Prose writing and tagging aren’t  two useful features bolted together, but two different modes of thought. 
+
+Document mode collapses that distance. The tag lives right inside the flow-state output, so moving from generating to judging is instant and not a context switch. Tagging is retroactive — you're not deciding in advance what will matter, you're recognizing it  after it surfaces, which is how insight actually happens. 
+
+### The result
+
+Clarity of thought and action-orientation stay coupled, instead of drifting apart the way they do when reflection and ‘task’ capture live in separate tools.
+
+### How it works:
+
+Start a node in document mode and write normally.
+As you write (or on a re-read pass), tag individual paragraphs with # where something is worth surfacing later. An insight, a decision, an open question, a task. Each tagged paragraph becomes independently queryable. 
+
+Later, pull up every paragraph tags across all your documents, regardless of which entry it came from.
+
+### Example use case 
+
+You journal each mornings / evening. Some entries mention a recurring frustration with a project, others contain a new idea or insight worth coming back to. Tag the frustration paragraphs *#friction* and the idea paragraphs *#idea*, a thing to do as *#task* etc. When *in work mode*, query *#friction* to see the pattern, or *#idea* to review everything you've marked.
+
+Shared by Joris Tillmans.
+
 ## Your tip here
 
 A heading, a few lines, and a picture if it helps. Say which version of Vellum you were on if it matters.
