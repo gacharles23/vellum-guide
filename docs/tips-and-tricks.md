@@ -22,7 +22,7 @@ Shared by Grace.
 
 In the outliner, consecutive presses of `cmd-A` (macOS) or `ctrl-A` (Windows and Linux) will incrementally increase the selection: first just the current node’s immediate content is selected, then its descendants, then its parent and siblings, then its grandparent and siblings of its parent, etc.
 
-<video src="/videos/increment-selection.mp4" controls muted playsinline width="100%"></video>
+<video src="/videos/incrementselection.mp4" controls muted playsinline width="100%"></video>
 
 Shared by Darren.
 
