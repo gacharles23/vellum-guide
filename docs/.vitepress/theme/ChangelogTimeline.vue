@@ -72,12 +72,70 @@ async function goToRelease(event) {
         <time>{{ releases[0].date }}</time>
       </div>
       <h2 :id="`v${releases[0].version}`">{{ releases[0].title }}</h2>
-      <ul>
+      <nav
+        v-if="releases[0].links?.discordPost || releases[0].links?.betaAnnouncement"
+        class="vg-release-links"
+        aria-label="Links for this release"
+      >
+        <a
+          v-if="releases[0].links?.discordPost"
+          :href="releases[0].links.discordPost"
+          target="_blank"
+          rel="noopener"
+        >Original Discord post <span aria-hidden="true">↗</span></a>
+        <a
+          v-if="releases[0].links?.betaAnnouncement"
+          :href="releases[0].links.betaAnnouncement"
+          target="_blank"
+          rel="noopener"
+        >Beta announcement <span aria-hidden="true">↗</span></a>
+      </nav>
+      <ul v-if="releases[0].highlights?.length">
         <li v-for="item in releases[0].highlights" :key="typeof item === 'string' ? item : item.text">
           <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
           <template v-else>{{ item }}</template>
         </li>
       </ul>
+      <section
+        v-for="section in releases[0].sections"
+        :key="section.title"
+        class="vg-release-section"
+      >
+        <h3>
+          <a v-if="section.href" :href="section.href">{{ section.title }} <span aria-hidden="true">→</span></a>
+          <template v-else>{{ section.title }}</template>
+        </h3>
+        <ul>
+          <li v-for="item in section.items" :key="typeof item === 'string' ? item : item.text">
+            <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
+            <template v-else>{{ item }}</template>
+          </li>
+        </ul>
+        <div
+          v-if="section.images?.length"
+          class="vg-release-images"
+          :class="{ 'has-multiple': section.images.length > 1 }"
+        >
+          <figure v-for="image in section.images" :key="image.src" class="vg-release-image">
+            <a :href="image.src" target="_blank" rel="noopener">
+              <img :src="image.src" :alt="image.alt" loading="lazy" decoding="async">
+            </a>
+            <figcaption v-if="image.caption">{{ image.caption }}</figcaption>
+          </figure>
+        </div>
+      </section>
+      <div
+        v-if="releases[0].images?.length"
+        class="vg-release-images"
+        :class="{ 'has-multiple': releases[0].images.length > 1 }"
+      >
+        <figure v-for="image in releases[0].images" :key="image.src" class="vg-release-image">
+          <a :href="image.src" target="_blank" rel="noopener">
+            <img :src="image.src" :alt="image.alt" decoding="async">
+          </a>
+          <figcaption v-if="image.caption">{{ image.caption }}</figcaption>
+        </figure>
+      </div>
     </article>
 
     <div class="vg-release-list" aria-label="Previous releases">
@@ -111,12 +169,70 @@ async function goToRelease(event) {
           class="vg-release-body"
         >
           <h3 class="vg-release-title">{{ release.title }}</h3>
-          <ul>
+          <nav
+            v-if="release.links?.discordPost || release.links?.betaAnnouncement"
+            class="vg-release-links"
+            aria-label="Links for this release"
+          >
+            <a
+              v-if="release.links?.discordPost"
+              :href="release.links.discordPost"
+              target="_blank"
+              rel="noopener"
+            >Original Discord post <span aria-hidden="true">↗</span></a>
+            <a
+              v-if="release.links?.betaAnnouncement"
+              :href="release.links.betaAnnouncement"
+              target="_blank"
+              rel="noopener"
+            >Beta announcement <span aria-hidden="true">↗</span></a>
+          </nav>
+          <ul v-if="release.highlights?.length">
             <li v-for="item in release.highlights" :key="typeof item === 'string' ? item : item.text">
               <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
               <template v-else>{{ item }}</template>
             </li>
           </ul>
+          <section
+            v-for="section in release.sections"
+            :key="section.title"
+            class="vg-release-section"
+          >
+            <h4>
+              <a v-if="section.href" :href="section.href">{{ section.title }} <span aria-hidden="true">→</span></a>
+              <template v-else>{{ section.title }}</template>
+            </h4>
+            <ul>
+              <li v-for="item in section.items" :key="typeof item === 'string' ? item : item.text">
+                <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
+                <template v-else>{{ item }}</template>
+              </li>
+            </ul>
+            <div
+              v-if="section.images?.length"
+              class="vg-release-images"
+              :class="{ 'has-multiple': section.images.length > 1 }"
+            >
+              <figure v-for="image in section.images" :key="image.src" class="vg-release-image">
+                <a :href="image.src" target="_blank" rel="noopener">
+                  <img :src="image.src" :alt="image.alt" loading="lazy" decoding="async">
+                </a>
+                <figcaption v-if="image.caption">{{ image.caption }}</figcaption>
+              </figure>
+            </div>
+          </section>
+          <div
+            v-if="release.images?.length"
+            class="vg-release-images"
+            :class="{ 'has-multiple': release.images.length > 1 }"
+          >
+            <figure v-for="image in release.images" :key="image.src" class="vg-release-image">
+              <a :href="image.src" target="_blank" rel="noopener">
+                <img :src="image.src" :alt="image.alt" loading="lazy" decoding="async">
+              </a>
+              <figcaption v-if="image.caption">{{ image.caption }}</figcaption>
+            </figure>
+          </div>
           <details v-if="release.more" class="vg-release-more">
             <summary>More in this release</summary>
             <ul>
