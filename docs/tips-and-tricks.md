@@ -1,7 +1,7 @@
 ---
 title: Tips and tricks
 description: Small things people have found that make Vellum nicer to use.
-authors: ["Grace", "Joris Tillmans"]
+authors: ["Grace", "Joris Tillmans", "Darren"]
 ---
 
 # Tips and tricks
@@ -17,6 +17,14 @@ Have a tip? Add it at the bottom of this page: a heading, a few lines, and your 
 Cmd-K on any bullet, then Add to, and pick a note. The bullet stays where you wrote it, and it also shows up on the page you picked. Handy for a running log on a project without leaving today's note.
 
 Shared by Grace.
+
+## Increment selection with consecutive `cmd-A`
+
+In the outliner, consecutive presses of `cmd-A` (macOS) or `ctrl-A` (Windows and Linux) will incrementally increase the selection: first just the current node’s immediate content is selected, then its descendants, then its parent and siblings, then its grandparent and siblings of its parent, etc.
+
+https://github.com/user-attachments/assets/2a939153-deb0-488e-b6d1-01350272294d
+
+Shared by Darren.
 
 ## Vellum Documents: Journaling with Structure
 
