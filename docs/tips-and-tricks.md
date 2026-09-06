@@ -18,6 +18,14 @@ Cmd-K on any bullet, then Add to, and pick a note. The bullet stays where you wr
 
 Shared by Grace.
 
+## Increment selection with consecutive `cmd-A`
+
+In the outliner, consecutive presses of `cmd-A` (macOS) or `ctrl-A` (Windows and Linux) will incrementally increase the selection: first just the current node’s immediate content is selected, then its descendants, then its parent and siblings, then its grandparent and siblings of its parent, etc.
+
+https://github.com/user-attachments/assets/2a939153-deb0-488e-b6d1-01350272294d
+
+Shared by Darren.
+
 ## Your tip here
 
 A heading, a few lines, and a picture if it helps. Say which version of Vellum you were on if it matters.
