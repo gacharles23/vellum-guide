@@ -2,6 +2,11 @@
 title: Import guide
 description: Learn how to import Markdown folders and JSON workspaces into Vellum.
 version: "0.2.2"
+referencedBy:
+  - title: Guides
+    href: /guides/
+  - title: Changelog · Vellum 0.2.2
+    href: /changelog#v0.2.2
 ---
 
 # Import guide
@@ -10,4 +15,4 @@ version: "0.2.2"
 Vellum’s guides are slowly being built by the community. This guide is coming soon.
 :::
 
-Import support was introduced in [Vellum 0.2.2](/changelog#v0.2.2).
+<ReferencedBy />
