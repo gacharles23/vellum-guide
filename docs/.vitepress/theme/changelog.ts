@@ -1,12 +1,125 @@
+export interface ChangelogImage {
+  src: string
+  alt: string
+  caption?: string
+}
+
+export type ChangelogItem = string | { text: string, href: string }
+
+export interface ChangelogSection {
+  title: string
+  href?: string
+  items: ChangelogItem[]
+  images?: ChangelogImage[]
+}
+
+export interface ChangelogLinks {
+  discordPost?: string
+  betaAnnouncement?: string
+}
+
 export interface ChangelogRelease {
   version: string
   date: string
   title: string
-  highlights: string[]
+  highlights?: ChangelogItem[]
+  sections?: ChangelogSection[]
+  images?: ChangelogImage[]
+  links?: ChangelogLinks
   more?: string[]
 }
 
 export const releases: ChangelogRelease[] = [
+  {
+    version: '0.2.3', date: '29 August 2026', title: 'hotfix release',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1543442619923824731',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1543442772596629514'
+    },
+    highlights: [
+      'fixed: JSON import failing on big exports with lots of attachments',
+      'fixed: JSON import refusing files where a calendar page is also linked from a note',
+      'deleting folded notes now warns you first and names exactly what would be removed'
+    ]
+  },
+  {
+    version: '0.2.2', date: '29 August 2026', title: 'richer dates, safer imports, multiple vaults, and a sidebar you control',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1543288867954622495',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1543289053200392212'
+    },
+    sections: [
+      {
+        title: 'Date and time',
+        href: '/guides/fields#date-and-time',
+        items: [
+          'date fields can now capture a time',
+          'enter just a year, a month and year, or a full date',
+          'sorting and grouping work across all supported date formats',
+          'times can include a location, such as “2pm London”. Vellum saves the location, but does not use it yet—that will come in a future release'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.2/date-time.webp',
+            alt: 'A Vellum date field set to September 1, 2026 at 2:00 pm',
+            caption: 'Date fields can now capture a date and time together.'
+          }
+        ]
+      },
+      {
+        title: 'Import',
+        href: '/guides/import',
+        items: [
+          'import a Markdown folder or JSON workspace',
+          'review a summary before importing so you know exactly what will happen',
+          'undo an import immediately or at any point later'
+        ]
+      },
+      {
+        title: 'Multiple vaults',
+        href: '/guides/vaults#multiple-vaults',
+        items: [
+          'use unlimited, independent vaults—handy for separating work and personal notes',
+          'open multiple vaults at once, each in its own window',
+          'choose which vault receives a Markdown folder or JSON workspace when importing'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.2/multi-vault.webp',
+            alt: 'The New vault dialog with options to start fresh, copy the current vault, or restore a backup',
+            caption: 'Create a fresh vault, copy one, or restore from a backup.'
+          }
+        ]
+      },
+      {
+        title: 'Areas: Collections redux',
+        href: '/guides/interface#areas',
+        items: [
+          'Collections are no longer shown in the sidebar',
+          'customize the sidebar with your own sections, called Areas',
+          'put any combination of tags, nodes, and documents in an Area',
+          'rename, rearrange, and remove Areas whenever you like'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.2/areas-and-vaults.webp',
+            alt: 'Two Vellum vault windows with different custom Areas in their sidebars',
+            caption: 'Each vault is independent, with its own notes and sidebar Areas.'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.0', date: '24 August 2026', title: 'mobile access to your Vellum vault is now here! 📱',
+    highlights: [
+      {
+        text: 'see the setup instructions in the beta-test channel',
+        href: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1541407603630940271'
+      },
+      "NB: this is NOT the final destination for mobile on vellum ... it's a stepping stone on the way toward an eventual standalone mobile app"
+    ]
+  },
   {
     version: '0.1.36', date: '21 August 2026', title: 'small release note, big update.',
     highlights: [

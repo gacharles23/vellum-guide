@@ -13,3 +13,4 @@ This guide is written by people who use Vellum.
 Everyone here has written or edited a page on this site. When your first change goes live, we'll add your name below.
 
 - **Futur Panda**
+- **Joris Tillmans**

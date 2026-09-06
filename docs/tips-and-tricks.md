@@ -1,7 +1,7 @@
 ---
 title: Tips and tricks
 description: Small things people have found that make Vellum nicer to use.
-authors: ["Grace"]
+authors: ["Grace", "Joris Tillmans", "Darren"]
 ---
 
 # Tips and tricks
@@ -25,6 +25,39 @@ In the outliner, consecutive presses of `cmd-A` (macOS) or `ctrl-A` (Windows and
 https://github.com/user-attachments/assets/2a939153-deb0-488e-b6d1-01350272294d
 
 Shared by Darren.
+
+## Vellum Documents: Journaling with Structure
+
+Vellum documents let you write in continuous prose, a journal entry, a reflection, a brain dump, while still getting the structure benefits of Vellum's tagging and querying system, paragraph by paragraph. Most note-taking tools force a choice between free writing (journals, notebooks) and structured capture (tagged nodes, outlines). Vellum documents remove that trade-off.
+
+### What's actually happening cognitively
+
+**Prose writing** is generative and associative. You’re not retrieving known facts, you're letting connections surface that weren't fully formed before you started typing. *Writing to think*: the writing process does cognitive work your head alone can't, because articulation forces vague impressions into sequence and language. 
+
+**Tagging** is a completely different operation. It’s evaluative and discrete. You step back from the flow and ask 'does this matter, and as what?’ 
+It’s classifying.
+
+Prose writing and tagging aren’t two useful features bolted together, but two different modes of thought. 
+
+Documents in Vellum collapse that distance. The tag lives right inside the flow-state output, so moving from generating to judging is instant and not a context switch. Tagging is retroactive — you're not deciding in advance what will matter, you're recognizing it after it surfaces, which is how insight actually happens. 
+
+### The result
+
+Clarity of thought and action-orientation stay coupled, instead of drifting apart the way they do when reflection and ‘task’ capture live in separate tools.
+
+### How it works:
+
+To create a document, start a note anywhere in your outline, say on today's daily note. Then Cmd-K (Ctrl-K on Windows and Linux), choose Convert to document, and Cmd-Enter (Ctrl-Enter) to step into it. Write normally.
+
+As you write (or on a re-read pass), tag individual paragraphs with # where something is worth surfacing later. An insight, a decision, an open question, a task. Each tagged paragraph becomes independently queryable. 
+
+Later, pull up every paragraph you tagged, across all your documents, regardless of which entry it came from.
+
+### Example use case 
+
+You journal each morning and/or each evening. Some entries mention a recurring frustration with a project, others contain a new idea or insight worth coming back to. Tag the frustration paragraphs *#friction* and the idea paragraphs *#idea*, a thing to do as *#task* etc. When you sit down to work, query *#friction* to see the pattern, or *#idea* to review everything you've marked.
+
+Shared by Joris Tillmans.
 
 ## Your tip here
 
