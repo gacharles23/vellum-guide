@@ -31,6 +31,18 @@ export interface ChangelogRelease {
 
 export const releases: ChangelogRelease[] = [
   {
+    version: '0.2.3', date: '29 August 2026', title: 'hotfix release',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1543442619923824731',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1543442772596629514'
+    },
+    highlights: [
+      'fixed: JSON import failing on big exports with lots of attachments',
+      'fixed: JSON import refusing files where a calendar page is also linked from a note',
+      'deleting folded notes now warns you first and names exactly what would be removed'
+    ]
+  },
+  {
     version: '0.2.2', date: '29 August 2026', title: 'richer dates, safer imports, multiple vaults, and a sidebar you control',
     links: {
       discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1543288867954622495',
