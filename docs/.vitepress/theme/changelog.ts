@@ -2,11 +2,21 @@ export interface ChangelogRelease {
   version: string
   date: string
   title: string
-  highlights: string[]
+  highlights: Array<string | { text: string, href: string }>
   more?: string[]
 }
 
 export const releases: ChangelogRelease[] = [
+  {
+    version: '0.2.0', date: '24 August 2026', title: 'mobile access to your Vellum vault is now here! 📱',
+    highlights: [
+      {
+        text: 'see the setup instructions in the beta-test channel',
+        href: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1541407603630940271'
+      },
+      "NB: this is NOT the final destination for mobile on vellum ... it's a stepping stone on the way toward an eventual standalone mobile app"
+    ]
+  },
   {
     version: '0.1.36', date: '21 August 2026', title: 'small release note, big update.',
     highlights: [

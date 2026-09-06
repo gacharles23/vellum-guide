@@ -73,7 +73,10 @@ async function goToRelease(event) {
       </div>
       <h2 :id="`v${releases[0].version}`">{{ releases[0].title }}</h2>
       <ul>
-        <li v-for="item in releases[0].highlights" :key="item">{{ item }}</li>
+        <li v-for="item in releases[0].highlights" :key="typeof item === 'string' ? item : item.text">
+          <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
+          <template v-else>{{ item }}</template>
+        </li>
       </ul>
     </article>
 
@@ -109,7 +112,10 @@ async function goToRelease(event) {
         >
           <h3 class="vg-release-title">{{ release.title }}</h3>
           <ul>
-            <li v-for="item in release.highlights" :key="item">{{ item }}</li>
+            <li v-for="item in release.highlights" :key="typeof item === 'string' ? item : item.text">
+              <a v-if="typeof item !== 'string'" :href="item.href">{{ item.text }}</a>
+              <template v-else>{{ item }}</template>
+            </li>
           </ul>
           <details v-if="release.more" class="vg-release-more">
             <summary>More in this release</summary>
