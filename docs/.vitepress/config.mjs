@@ -95,6 +95,13 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Walkthroughs',
+            collapsed: false,
+            items: [
+              { text: 'Planning a trip', link: '/guides/trip' },
+            ]
+          },
+          {
             text: 'Data & storage',
             collapsed: false,
             items: [

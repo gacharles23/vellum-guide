@@ -632,3 +632,12 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* A picture in the body is clickable: it opens full size. */
+.vp-doc img {
+  cursor: zoom-in;
+}
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 100;
+}

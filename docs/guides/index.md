@@ -20,5 +20,6 @@ Focused walkthroughs for getting more out of Vellum. These guides are being buil
 - [Import guide](/guides/import) — bring a Markdown folder or JSON workspace into Vellum
 - [Vault guide](/guides/vaults) — create and work with multiple independent vaults
 - [Interface guide](/guides/interface) — customize the places and tools you see in Vellum
+- [Planning a trip](/guides/trip) — a worked example of sections, Add to, and saved searches
 
 <ReferencedBy />
