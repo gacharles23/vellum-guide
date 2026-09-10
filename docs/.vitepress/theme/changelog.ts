@@ -31,6 +31,298 @@ export interface ChangelogRelease {
 
 export const releases: ChangelogRelease[] = [
   {
+    version: '0.2.16', date: '8 September 2026', title: 'Full-vault backup hotfix',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1546972472153346079',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1546972803968802826'
+    },
+    sections: [
+      {
+        title: 'Backups',
+        href: '/guides/vaults',
+        items: [
+          'fixed issues that could prevent certain files from being included when backing up a vault to cloud storage'
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.15', date: '8 September 2026', title: 'Proper full-vault backups',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1546895270548082729',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1546895546164191304'
+    },
+    sections: [
+      {
+        title: 'Backups',
+        href: '/guides/vaults',
+        items: [
+          'Vellum can now make a full backup of your vault on a schedule. Choose a folder under Settings > Backup; once a day, immediately before your first change, Vellum copies the entire vault. The folder can be on another disk or in a cloud service such as iCloud Drive, Dropbox, or Nextcloud',
+          'every attached image, PDF, and file is included once. Media is kept in one folder inside the backup folder, so thirty days of backups do not create thirty copies of every image',
+          'choose how long backups are kept. The default retains every day for a month, one per week for a year, and one per month after that. Alternatively, keep every backup indefinitely. Settings lists each backup with its date and size, and lets you delete any of them',
+          'Back up now in Settings makes a full backup whenever you like. Use Stop backing up to disable scheduled full-vault backups',
+          'if the backup folder cannot be reached, a note at the bottom of the window explains why. Your notes remain safe, and Vellum tries again the next time you make a change',
+          'to restore, open the vault menu and choose New vault > From a backup. The list shows your five newest backups with their dates and sizes, a row that opens the backup folder in Finder for older backups, and the safety copies Vellum keeps beside your notes. A restore always creates a new vault beside the current one; your current vault is untouched'
+        ]
+      },
+      {
+        title: 'Settings',
+        href: '/guides/interface',
+        items: [
+          'Settings is reorganized into Backup, Restore, Export, and Import. Restore explains that a backup brings back everything and how this differs from an import, which restores only what the imported files contain. The Markdown export switch is now called Export automatically'
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.14', date: '7 September 2026', title: 'Yet even more ❤️ on sections…',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1546594282784296980',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1546594568818921497'
+    },
+    sections: [
+      {
+        title: 'Sections',
+        href: '/guides/sections',
+        items: [
+          'show every section on a page as a list, table, or cards from the same controls used for sorting and filtering. For example, show a project’s Tasks as a table with Deadline and Owner, or add a Dealer column to a Pros table in place. A tag’s schema page offers the same choice under “Shown as”',
+          'a section powered by a saved search initially looks like the search’s own page, so an existing table appears as a table everywhere it is used. After that, the section has its own arrangement: changing one does not change the other',
+          'table columns resized on one page retain their width on that page only, even when the rest of the arrangement is shared',
+          'when you add the first section to a page already sorted or shown as a table, that arrangement moves into the new section instead of disappearing, and a toast explains what happened',
+          'a sectioned note opened inside another note now presents every section as its own page does, with the same table or cards, sorting, and filtering',
+          'shift-cmd-L—or ctrl-shift-L on Linux and Windows—toggles view options for the row containing your cursor. On a sectioned page, it opens that section’s sort, group, and filter bar; from any other row, it toggles the page’s own view options',
+          'the Zoom in link on a row’s view strip now opens the page with its controls already showing',
+          'view all the sections on a page together as one list, table, or set of cards covering every bullet, with Section available as a column and grouping. Sections powered by saved searches or fields continue to appear separately for now'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.14/tasks-as-table.webp',
+            alt: 'A project Tasks section displayed as a table with Status, Deadline, and Owner columns',
+            caption: 'Show any section as a list, table, or cards.'
+          },
+          {
+            src: '/images/changelog/0.2.14/add-a-field-in-a-section.webp',
+            alt: 'A Pros section displayed as a table while adding a new Dealer field as a column',
+            caption: 'Add fields as table columns directly inside a section.'
+          },
+          {
+            src: '/images/changelog/0.2.14/sections-inside-parent.webp',
+            alt: 'An expanded Audi note showing its Pros as a table and Cons as cards inside its parent note',
+            caption: 'Expanded notes preserve each section’s chosen view.'
+          },
+          {
+            src: '/images/changelog/0.2.14/section-in-sidebar-card.webp',
+            alt: 'A Books section displayed as a table inside a J. R. R. Tolkien sidebar card',
+            caption: 'Section views also work inside sidebar cards.'
+          },
+          {
+            src: '/images/changelog/0.2.14/all-together-table.webp',
+            alt: 'A page combining Pros and Cons into one table with a Section column',
+            caption: 'View a page’s sections together, with Section available as a column or grouping.'
+          }
+        ]
+      },
+      {
+        title: 'Fields',
+        href: '/guides/fields',
+        items: [
+          'number fields now accept >= and <= when filtering'
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.13', date: '6 September 2026', title: 'A bunch of small updates to complement the last release',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1546321407531683921',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1546321612842864660'
+    },
+    sections: [
+      {
+        title: 'Sections',
+        href: '/guides/sections',
+        items: [
+          'sorted and filtered lists now behave while you work in them. Previously, a list sorted by title re-sorted on every keystroke: the row and cursor hopped away, Tab did a headshake, and margin-drag couldn’t select rows. Now the order freezes while your cursor is in the list; a row added with Enter appears where you entered it; Tab moves it under the row above; and margin-drag selects rows normally. The list re-sorts when you click out. Dragging a bullet to move it remains disabled while sorting is active',
+          'rows inside a section now display at the same font size as the note’s own title, and a note mirrored several levels deep no longer shrinks at each level'
+        ]
+      },
+      {
+        title: 'Notes',
+        href: '/guides/notes',
+        items: [
+          'Tab on a bullet beneath a mirrored note now adds it to the original',
+          'a link in a page title now offers Open and Change the words from cmd-k, just like a link in a bullet'
+        ]
+      },
+      {
+        title: 'Search',
+        href: '/guides/search',
+        items: [
+          'Used in N notes now counts notes that show the search as a section, not only as a field'
+        ]
+      },
+      {
+        title: 'Fields',
+        href: '/guides/fields',
+        items: [
+          'the rule menu on a tag no longer repeats the same sentence once per tag that has a field of that name'
+        ]
+      },
+      {
+        title: 'Under the hood',
+        items: [
+          'plus a handful of small internal cleanups'
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.12', date: '6 September 2026', title: 'It’s all about the section!',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1546199648090198047',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1546199807264038942'
+    },
+    sections: [
+      {
+        title: 'Search',
+        href: '/guides/search',
+        items: [
+          'live search can now find notes that have a section, not only what’s inside one: every person with a To discuss section, only those with something in it, or only the empty ones. Leave the name blank to find every note with any section at all',
+          'a section search can now inspect the note holding the section—for example, minutes of meetings Ben attended, minutes from the last week, or minutes of meetings a manager attended',
+          'group section-search results by the note they came from, with one band per note holding a matching section. Each result displays a small chip naming the section it came through, alongside the breadcrumb showing where the note lives'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.12/meeting-minutes.webp',
+            alt: 'A search finding rows in Minutes sections belonging to notes tagged meeting',
+            caption: 'Find content inside a named section on matching notes.'
+          },
+          {
+            src: '/images/changelog/0.2.12/meeting-minutes-with-ben.webp',
+            alt: 'A search finding Minutes from notes whose Attendees field includes Ben Okafor',
+            caption: 'Filter by fields on the note that holds the section.'
+          },
+          {
+            src: '/images/changelog/0.2.12/meeting-minutes-from-last-week.webp',
+            alt: 'A search finding Minutes sections on notes created during the last seven days',
+            caption: 'Combine section searches with dates on their parent notes.'
+          },
+          {
+            src: '/images/changelog/0.2.12/meeting-minutes-with-managers.webp',
+            alt: 'A search finding Minutes from notes attended by people whose Role is Manager',
+            caption: 'Follow field paths from the note that holds a section.'
+          },
+          {
+            src: '/images/changelog/0.2.12/grouped-actions.webp',
+            alt: 'Action Items search results grouped by the note containing each matching section',
+            caption: 'Group results by their section’s note and see each source section in a chip.'
+          }
+        ]
+      },
+      {
+        title: 'Sections',
+        href: '/guides/sections',
+        items: [
+          'sections now appear in the outline. When a note with its own sections is expanded inside another note, a label sits above each group; drag a bullet beneath a label to file it into that section',
+          'when you add the first section to a note that already has bullets, Vellum asks whether to move them into the new section or keep them together above it in a renameable section called Notes',
+          'turn a bullet into a section in one step: a Pros bullet with three children becomes a Pros section holding those three. Use cmd-k or type / on the bullet and choose Section. Cmd-k also offers “Make every top-level bullet a section…” to convert them all at once',
+          'change a section’s rule after the fact by selecting its sentence and choosing a new one. The section keeps its name, sorting, folds, and every search that names it'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.12/conv-to-sections-1.webp',
+            alt: 'The command menu offering to turn every top-level bullet on a Mini Cooper note into a section',
+            caption: 'Convert every top-level bullet into a section in one step.'
+          },
+          {
+            src: '/images/changelog/0.2.12/conv-to-sections-2.webp',
+            alt: 'The Mini Cooper note after conversion, with Images, Pros, and Cons shown as columns',
+            caption: 'Each former top-level bullet becomes a named section.'
+          },
+          {
+            src: '/images/changelog/0.2.12/conv-to-sections-3.webp',
+            alt: 'The Mini Cooper note expanded inside Car shopping with Images, Pros, and Cons section labels',
+            caption: 'Section labels remain visible when a note is expanded inside another note.'
+          },
+          {
+            src: '/images/changelog/0.2.12/editable-sections.webp',
+            alt: 'A project tag schema changing what its Items section should show',
+            caption: 'Change a section’s rule without rebuilding its other settings.'
+          }
+        ]
+      },
+      {
+        title: 'Interface',
+        href: '/guides/interface',
+        items: [
+          'sidebar cards now show a note’s sections—live, editable, and foldable'
+        ]
+      }
+    ]
+  },
+  {
+    version: '0.2.11', date: '5 September 2026', title: 'Archive, backups, images, and a few more…',
+    links: {
+      discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1545865957212164147',
+      betaAnnouncement: 'https://discord.com/channels/1518609452712988703/1528233791305416838/1545866311056498699'
+    },
+    sections: [
+      {
+        title: 'Archive',
+        href: '/guides/notes',
+        items: [
+          'archiving a note now archives everything nested under it, and unarchiving brings it all back',
+          'archived tasks stay out of Today’s tasks',
+          'archived tags leave the sidebar and All tags, and aren’t shown when you type #'
+        ]
+      },
+      {
+        title: 'Backups',
+        href: '/guides/vaults',
+        items: [
+          'restore from a backup file of your own, not just the app’s recent automatic backups',
+          'backups are now made immediately before your first change after starting, so opening Vellum only to read never pushes an old backup off the shelf'
+        ]
+      },
+      {
+        title: 'Images',
+        href: '/guides/notes',
+        items: [
+          'words and a picture in the same bullet or paragraph now sit side by side, like a magazine column',
+          'pictures in bullets and documents have a placement strip: hover over it—or press and hold on a phone—and choose automatic, its own line, left, or right',
+          'in a document, the paragraphs after a tall picture keep flowing beside it until the image ends'
+        ],
+        images: [
+          {
+            src: '/images/changelog/0.2.11/cars-outline.webp',
+            alt: 'An outline combining car images and text with automatic, full-line, left, and right image placement',
+            caption: 'Place images beside text or give them a line of their own in an outline.'
+          },
+          {
+            src: '/images/changelog/0.2.11/cars-document.webp',
+            alt: 'A prose document with paragraphs flowing around car images placed on the left and right',
+            caption: 'Document paragraphs continue flowing beside tall images.'
+          }
+        ]
+      },
+      {
+        title: 'Search',
+        href: '/guides/search',
+        items: [
+          'the search box on a search now also finds rows inside a nested search you’ve opened',
+          'a saved search’s own page now lists notes that include the search in a field. A note or tag showing the search as a section is not counted yet'
+        ]
+      },
+      {
+        title: 'Import',
+        href: '/guides/import',
+        items: [
+          'a note property containing multiple links now imports as a reference field holding those notes. A list that mixes links with plain words, or names a note outside the import, stays text as before'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.2.10', date: '5 September 2026', title: 'Various fixes & enhancements',
     links: {
       discordPost: 'https://discord.com/channels/1518609452712988703/1533185269623164938/1545765162739441674',
