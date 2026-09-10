@@ -90,7 +90,7 @@ export const releases: ChangelogRelease[] = [
           'table columns resized on one page retain their width on that page only, even when the rest of the arrangement is shared',
           'when you add the first section to a page already sorted or shown as a table, that arrangement moves into the new section instead of disappearing, and a toast explains what happened',
           'a sectioned note opened inside another note now presents every section as its own page does, with the same table or cards, sorting, and filtering',
-          'shift-cmd-L—or ctrl-shift-L on Linux and Windows—toggles view options for the row containing your cursor. On a sectioned page, it opens that section’s sort, group, and filter bar; from any other row, it toggles the page’s own view options',
+          'shift-cmd-L—or ctrl-shift-L on Linux and Windows—toggles view options. On a sectioned page, it opens that section’s sort, group, and filter bar; from any other row, it toggles the page’s own view options',
           'the Zoom in link on a row’s view strip now opens the page with its controls already showing',
           'view all the sections on a page together as one list, table, or set of cards covering every bullet, with Section available as a column and grouping. Sections powered by saved searches or fields continue to appear separately for now'
         ],
