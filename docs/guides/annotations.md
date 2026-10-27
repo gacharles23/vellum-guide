@@ -77,7 +77,7 @@ That's the setup. Three people, two projects, one field. Now for the interesting
 
 ## Rosa on the relaunch
 
-Open Relaunch website. In the Team field, click the small arrow at the start of Rosa's pill. (Clicking her name takes you to her page. The arrow opens her right here.) Rosa opens under the field, her Role and How we met and all.
+Open the `Relaunch website` page. In the Team field, click the small arrow at the start of Rosa's pill. (Clicking her name takes you to her page. The arrow opens her right here.) Rosa opens under the field, her Role and How we met and all.
 
 Now move the pointer onto her name at the top of that box. A faint sticky note shows up just after it, beside the little open-page icon. Click the sticky note.
 
